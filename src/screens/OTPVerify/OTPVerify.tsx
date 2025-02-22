@@ -1,6 +1,5 @@
 import {
   ScrollView,
-  StatusBar,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -30,12 +29,12 @@ const OTPVerify: React.FC<propTypes> = ({navigation}) => {
 
       return () => clearInterval(timerInterval);
     }
-  }, [timer]); // Only run when timer changes
+  }, [timer]);
 
   const handleVerify = () => {
     if (otp.length === 4) {
       console.log('OTP Verified:', otp);
-      navigation.navigate('home'); // Change as per your navigation
+      navigation.navigate('home');
     }
   };
 
